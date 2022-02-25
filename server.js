@@ -13,7 +13,7 @@ const db = knex({
   // Enter your own database information here based on what you created
   client: "pg",
   connection: {
-    host: "127.0.0.1",
+    host: "postgresql-acute-94816",
     user: "joblyn",
     password: "",
     database: "smart-brain",
@@ -41,5 +41,5 @@ app.post("./imageurl", (req, res) => {
 });
 
 app.listen(process.env.PORT || 3005, () => {
-  console.log(`app is running on port ${process.env.PORT}`);
+  console.log(`app is running on port ${process.env.PORT || 3005}`);
 });
